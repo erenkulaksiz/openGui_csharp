@@ -7,3 +7,4 @@ C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csha
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.csproj.CoreCompileInputs.cache
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.exe
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.pdb
+C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.Form1.resources
