@@ -36,8 +36,7 @@ namespace openGui_csharp
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        ///
+        
         private void PBox_moveForm_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -55,9 +54,89 @@ namespace openGui_csharp
             }
         }
 
+        public bool numaraMi(object girdi)
+        {
+            try { long x = Convert.ToInt64(girdi);  return true; }
+            catch (Exception ex) { Console.Write(ex); return false; }
+            
+        }
+
+        public void sonucYaz(string girdi) { sonuclbl.Text = girdi; }
+        
         private void PBox_moveForm_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void Btntopla_Click(object sender, EventArgs e)
+        {
+            if (numaraMi(girilecekbox1.Text))
+            {
+                if (numaraMi(girilecekbox2.Text))
+                {
+                    long girdi1 = Convert.ToInt64(girilecekbox1.Text);
+                    long girdi2 = Convert.ToInt64(girilecekbox2.Text);
+                    long sonuc = girdi1 + girdi2;
+                    sonucYaz("Sonuç: "+Convert.ToString(sonuc));
+                    // Birdahakine labela değilde textbox'a yazdırırsan
+                    // insanların çıktıyı kopyalaması kolaylaşır.
+                }
+                else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
+            }
+            else MessageBox.Show("1. kutudaki girdi sadece sayı olabilir!");
+        }
+
+        private void Btncikar_Click(object sender, EventArgs e)
+        {
+            if (numaraMi(girilecekbox1.Text))
+            {
+                if (numaraMi(girilecekbox2.Text))
+                {
+                    long girdi1 = Convert.ToInt64(girilecekbox1.Text);
+                    long girdi2 = Convert.ToInt64(girilecekbox2.Text);
+                    long sonuc = girdi1 - girdi2;
+                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                }
+                else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
+            }
+            else MessageBox.Show("1. kutudaki girdi sadece sayı olabilir!");
+        }
+
+        private void Btncarp_Click(object sender, EventArgs e)
+        {
+            if (numaraMi(girilecekbox1.Text))
+            {
+                if (numaraMi(girilecekbox2.Text))
+                {
+                    long girdi1 = Convert.ToInt64(girilecekbox1.Text);
+                    long girdi2 = Convert.ToInt64(girilecekbox2.Text);
+                    long sonuc = girdi1 * girdi2;
+                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                }
+                else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
+            }
+            else MessageBox.Show("1. kutudaki girdi sadece sayı olabilir!");
+        }
+
+        private void Btnbol_Click(object sender, EventArgs e)
+        {
+            if (numaraMi(girilecekbox1.Text))
+            {
+                if (numaraMi(girilecekbox2.Text))
+                {
+                    long girdi1 = Convert.ToInt64(girilecekbox1.Text);
+                    long girdi2 = Convert.ToInt64(girilecekbox2.Text);
+                    float sonuc = girdi1 / girdi2;
+                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                }
+                else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
+            }
+            else MessageBox.Show("1. kutudaki girdi sadece sayı olabilir!");
+        }
+
+        private void İnfobtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("bu porogram eren kulaksız tarafından yazılmıştır");
         }
     }
 
