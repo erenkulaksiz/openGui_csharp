@@ -13,6 +13,8 @@ namespace openGui_csharp
     public partial class Form1 : Form
     {
 
+        Random rastgeleInt = new Random();
+
         private bool mouseDown;
         private Point lastLocation;
 
@@ -24,7 +26,9 @@ namespace openGui_csharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            genelislembox1.Visible = false;
+            bolmebox1.Visible = false;
+            rastgelebox1.Visible = false;
         }
 
         private void Btn_closeForm_Click(object sender, EventArgs e)
@@ -61,7 +65,83 @@ namespace openGui_csharp
             
         }
 
-        public void sonucYaz(string girdi) { sonuclbl.Text = girdi; }
+        public void sonucYaz(long sonuc, long girdi1, long girdi2, string islem) {
+
+            string sonucstr = Convert.ToString(sonuc);
+            string girdi1str = Convert.ToString(girdi1);
+            string girdi2str = Convert.ToString(girdi2);
+
+            
+            if(islem == "+")
+            {
+                genelislembox1.Visible = true;
+                bolmebox1.Visible = false;
+                rastgelebox1.Visible = false;
+
+                sonuclbltp.Text = sonucstr;
+                firstsonuclblTP.Text = girdi1str;
+                secondsonuclblTP.Text = girdi2str;
+                islemlbl.Text = islem;
+            }
+            else if(islem == "-")
+            {
+                genelislembox1.Visible = true;
+                bolmebox1.Visible = false;
+                rastgelebox1.Visible = false;
+
+                sonuclbltp.Text = sonucstr;
+                firstsonuclblTP.Text = girdi1str;
+                secondsonuclblTP.Text = girdi2str;
+                islemlbl.Text = islem;
+
+            }
+            else if(islem == "x")
+            {
+                genelislembox1.Visible = true;
+                bolmebox1.Visible = false;
+                rastgelebox1.Visible = false;
+
+                sonuclbltp.Text = sonucstr;
+                firstsonuclblTP.Text = girdi1str;
+                secondsonuclblTP.Text = girdi2str;
+                islemlbl.Text = islem;
+
+            }
+            else if(islem == "/")
+            {
+                genelislembox1.Visible = false;
+                bolmebox1.Visible = true;
+                rastgelebox1.Visible = false;
+
+                bolunenlbl.Text = girdi1str;
+                bolenlbl.Text = girdi2str;
+                bolumlbl.Text = sonucstr;
+
+                // Bolme icin ozel
+
+                long modbul = girdi1 % girdi2;
+                bolmeklnlbl.Text = Convert.ToString(modbul);
+
+            }
+            else if(islem == "rsg")
+            {
+                genelislembox1.Visible = false;
+                bolmebox1.Visible = false;
+                rastgelebox1.Visible = true;
+
+                rastgelelbl.Text = "Rastgele: " + Convert.ToString(sonuc);
+
+            }
+
+            
+
+        }
+
+        public int rastgeleAl(int min, int max)
+        {
+            try { int rastgelereturn = rastgeleInt.Next(min, max); return rastgelereturn; }
+            catch (Exception ex) { Console.Write(ex); return 0; }
+        }
         
         private void PBox_moveForm_MouseUp(object sender, MouseEventArgs e)
         {
@@ -77,7 +157,7 @@ namespace openGui_csharp
                     long girdi1 = Convert.ToInt64(girilecekbox1.Text);
                     long girdi2 = Convert.ToInt64(girilecekbox2.Text);
                     long sonuc = girdi1 + girdi2;
-                    sonucYaz("Sonuç: "+Convert.ToString(sonuc));
+                    sonucYaz(sonuc, girdi1, girdi2, "+");
                     // Birdahakine labela değilde textbox'a yazdırırsan
                     // insanların çıktıyı kopyalaması kolaylaşır.
                 }
@@ -95,7 +175,7 @@ namespace openGui_csharp
                     long girdi1 = Convert.ToInt64(girilecekbox1.Text);
                     long girdi2 = Convert.ToInt64(girilecekbox2.Text);
                     long sonuc = girdi1 - girdi2;
-                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                    sonucYaz(sonuc, girdi1, girdi2, "-");
                 }
                 else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
             }
@@ -111,7 +191,7 @@ namespace openGui_csharp
                     long girdi1 = Convert.ToInt64(girilecekbox1.Text);
                     long girdi2 = Convert.ToInt64(girilecekbox2.Text);
                     long sonuc = girdi1 * girdi2;
-                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                    sonucYaz(sonuc, girdi1, girdi2, "x");
                 }
                 else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
             }
@@ -126,8 +206,9 @@ namespace openGui_csharp
                 {
                     long girdi1 = Convert.ToInt64(girilecekbox1.Text);
                     long girdi2 = Convert.ToInt64(girilecekbox2.Text);
-                    float sonuc = girdi1 / girdi2;
-                    sonucYaz("Sonuç: " + Convert.ToString(sonuc));
+                    long sonuc = girdi1 / girdi2;
+
+                    sonucYaz(sonuc, girdi1, girdi2, "/");
                 }
                 else MessageBox.Show("2. kutudaki girdi sadece sayı olabilir!");
             }
@@ -136,7 +217,30 @@ namespace openGui_csharp
 
         private void İnfobtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("bu porogram eren kulaksız tarafından yazılmıştır");
+            MessageBox.Show("bu porogram eren kulaksız tarafından yazılmıştır v0.1");
+        }
+
+        private void Btnrastgele_Click(object sender, EventArgs e)
+        {
+            if (numaraMi(girilecekbox1.Text))
+            {
+                if (numaraMi(girilecekbox2.Text))
+                {
+                    if(Convert.ToInt32(girilecekbox1.Text) > Convert.ToInt32(girilecekbox2.Text))
+                    {
+                        MessageBox.Show("Minimum, maximumdan küçük olamaz!");
+                        girilecekbox1.Text = "Min";
+                        girilecekbox2.Text = "Max";
+                    }
+                    else
+                    {
+                        long sonuc = rastgeleAl(Convert.ToInt32(girilecekbox1.Text), Convert.ToInt32(girilecekbox2.Text));
+                        sonucYaz(sonuc, 0, 0, "rsg");
+                    }
+                }
+                else MessageBox.Show("Maximum içerisinde harf olamaz!");
+            }
+            else MessageBox.Show("Minimum içerisinde harf olamaz!");
         }
     }
 
