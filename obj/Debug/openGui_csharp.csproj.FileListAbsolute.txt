@@ -8,3 +8,12 @@ C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csha
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.exe
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.pdb
 C:\Users\royjc\source\repos\openGui_csharp\openGui_csharp\obj\Debug\openGui_csharp.Form1.resources
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\bin\Debug\openGui_csharp.exe.config
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\bin\Debug\openGui_csharp.exe
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\bin\Debug\openGui_csharp.pdb
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.csprojAssemblyReference.cache
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.Form1.resources
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.Properties.Resources.resources
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.csproj.GenerateResource.cache
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.exe
+C:\Users\Lynext\Desktop\Coding\Forks\openGui_csharp\obj\Debug\openGui_csharp.pdb

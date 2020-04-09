@@ -217,7 +217,7 @@ namespace openGui_csharp
 
         private void İnfobtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("bu porogram eren kulaksız tarafından yazılmıştır v0.1");
+            MessageBox.Show("bu program eren kulaksız tarafından yazılmıştır v0.1");
         }
 
         private void Btnrastgele_Click(object sender, EventArgs e)
@@ -241,6 +241,11 @@ namespace openGui_csharp
                 else MessageBox.Show("Maximum içerisinde harf olamaz!");
             }
             else MessageBox.Show("Minimum içerisinde harf olamaz!");
+        }
+
+        private void pBox_moveForm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

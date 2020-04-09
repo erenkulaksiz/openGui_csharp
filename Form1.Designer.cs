@@ -40,19 +40,19 @@
             this.btncarp = new System.Windows.Forms.Button();
             this.btnbol = new System.Windows.Forms.Button();
             this.genelislembox1 = new System.Windows.Forms.GroupBox();
+            this.islemlbl = new System.Windows.Forms.Label();
+            this.sonuclbltp = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.secondsonuclblTP = new System.Windows.Forms.Label();
             this.firstsonuclblTP = new System.Windows.Forms.Label();
             this.btnrastgele = new System.Windows.Forms.Button();
-            this.secondsonuclblTP = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.sonuclbltp = new System.Windows.Forms.Label();
-            this.islemlbl = new System.Windows.Forms.Label();
             this.bolmebox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bolenlbl = new System.Windows.Forms.Label();
-            this.bolmeklnlbl = new System.Windows.Forms.Label();
-            this.bolunenlbl = new System.Windows.Forms.Label();
-            this.bolumlbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.bolumlbl = new System.Windows.Forms.Label();
+            this.bolunenlbl = new System.Windows.Forms.Label();
+            this.bolmeklnlbl = new System.Windows.Forms.Label();
+            this.bolenlbl = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rastgelebox1 = new System.Windows.Forms.GroupBox();
             this.rastgelelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_moveForm)).BeginInit();
@@ -103,6 +103,7 @@
             this.pBox_moveForm.Size = new System.Drawing.Size(545, 43);
             this.pBox_moveForm.TabIndex = 2;
             this.pBox_moveForm.TabStop = false;
+            this.pBox_moveForm.Click += new System.EventHandler(this.pBox_moveForm_Click);
             this.pBox_moveForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PBox_moveForm_MouseDown);
             this.pBox_moveForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PBox_moveForm_MouseMove);
             this.pBox_moveForm.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PBox_moveForm_MouseUp);
@@ -207,6 +208,49 @@
             this.genelislembox1.TabIndex = 13;
             this.genelislembox1.TabStop = false;
             // 
+            // islemlbl
+            // 
+            this.islemlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islemlbl.Location = new System.Drawing.Point(6, 82);
+            this.islemlbl.Name = "islemlbl";
+            this.islemlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.islemlbl.Size = new System.Drawing.Size(37, 32);
+            this.islemlbl.TabIndex = 4;
+            this.islemlbl.Text = "+";
+            this.islemlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // sonuclbltp
+            // 
+            this.sonuclbltp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sonuclbltp.Location = new System.Drawing.Point(3, 130);
+            this.sonuclbltp.Name = "sonuclbltp";
+            this.sonuclbltp.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.sonuclbltp.Size = new System.Drawing.Size(347, 25);
+            this.sonuclbltp.TabIndex = 3;
+            this.sonuclbltp.Text = "0";
+            this.sonuclbltp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(6, 107);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(345, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "____________________________________________________________________";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // secondsonuclblTP
+            // 
+            this.secondsonuclblTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.secondsonuclblTP.Location = new System.Drawing.Point(6, 57);
+            this.secondsonuclblTP.Name = "secondsonuclblTP";
+            this.secondsonuclblTP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.secondsonuclblTP.Size = new System.Drawing.Size(347, 25);
+            this.secondsonuclblTP.TabIndex = 1;
+            this.secondsonuclblTP.Text = "0";
+            this.secondsonuclblTP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // firstsonuclblTP
             // 
             this.firstsonuclblTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -230,49 +274,6 @@
             this.btnrastgele.UseVisualStyleBackColor = true;
             this.btnrastgele.Click += new System.EventHandler(this.Btnrastgele_Click);
             // 
-            // secondsonuclblTP
-            // 
-            this.secondsonuclblTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.secondsonuclblTP.Location = new System.Drawing.Point(6, 57);
-            this.secondsonuclblTP.Name = "secondsonuclblTP";
-            this.secondsonuclblTP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.secondsonuclblTP.Size = new System.Drawing.Size(347, 25);
-            this.secondsonuclblTP.TabIndex = 1;
-            this.secondsonuclblTP.Text = "0";
-            this.secondsonuclblTP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(6, 107);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(345, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "____________________________________________________________________";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // sonuclbltp
-            // 
-            this.sonuclbltp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sonuclbltp.Location = new System.Drawing.Point(3, 130);
-            this.sonuclbltp.Name = "sonuclbltp";
-            this.sonuclbltp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sonuclbltp.Size = new System.Drawing.Size(347, 25);
-            this.sonuclbltp.TabIndex = 3;
-            this.sonuclbltp.Text = "0";
-            this.sonuclbltp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // islemlbl
-            // 
-            this.islemlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islemlbl.Location = new System.Drawing.Point(6, 82);
-            this.islemlbl.Name = "islemlbl";
-            this.islemlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.islemlbl.Size = new System.Drawing.Size(37, 32);
-            this.islemlbl.TabIndex = 4;
-            this.islemlbl.Text = "+";
-            this.islemlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // bolmebox1
             // 
             this.bolmebox1.Controls.Add(this.label2);
@@ -287,48 +288,16 @@
             this.bolmebox1.TabIndex = 14;
             this.bolmebox1.TabStop = false;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 150);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // bolenlbl
-            // 
-            this.bolenlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bolenlbl.Location = new System.Drawing.Point(185, 42);
-            this.bolenlbl.Name = "bolenlbl";
-            this.bolenlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bolenlbl.Size = new System.Drawing.Size(168, 25);
-            this.bolenlbl.TabIndex = 5;
-            this.bolenlbl.Text = "0";
-            this.bolenlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bolmeklnlbl
-            // 
-            this.bolmeklnlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bolmeklnlbl.Location = new System.Drawing.Point(6, 132);
-            this.bolmeklnlbl.Name = "bolmeklnlbl";
-            this.bolmeklnlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bolmeklnlbl.Size = new System.Drawing.Size(162, 25);
-            this.bolmeklnlbl.TabIndex = 6;
-            this.bolmeklnlbl.Text = "0";
-            this.bolmeklnlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // bolunenlbl
-            // 
-            this.bolunenlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bolunenlbl.Location = new System.Drawing.Point(6, 42);
-            this.bolunenlbl.Name = "bolunenlbl";
-            this.bolunenlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bolunenlbl.Size = new System.Drawing.Size(162, 25);
-            this.bolunenlbl.TabIndex = 7;
-            this.bolunenlbl.Text = "0";
-            this.bolunenlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(86, 85);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(37, 28);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "-";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // bolumlbl
             // 
@@ -341,16 +310,48 @@
             this.bolumlbl.Text = "0";
             this.bolumlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // bolunenlbl
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(86, 85);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(37, 28);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "-";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bolunenlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bolunenlbl.Location = new System.Drawing.Point(6, 42);
+            this.bolunenlbl.Name = "bolunenlbl";
+            this.bolunenlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bolunenlbl.Size = new System.Drawing.Size(162, 25);
+            this.bolunenlbl.TabIndex = 7;
+            this.bolunenlbl.Text = "0";
+            this.bolunenlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // bolmeklnlbl
+            // 
+            this.bolmeklnlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bolmeklnlbl.Location = new System.Drawing.Point(6, 132);
+            this.bolmeklnlbl.Name = "bolmeklnlbl";
+            this.bolmeklnlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bolmeklnlbl.Size = new System.Drawing.Size(162, 25);
+            this.bolmeklnlbl.TabIndex = 6;
+            this.bolmeklnlbl.Text = "0";
+            this.bolmeklnlbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // bolenlbl
+            // 
+            this.bolenlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bolenlbl.Location = new System.Drawing.Point(185, 42);
+            this.bolenlbl.Name = "bolenlbl";
+            this.bolenlbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bolenlbl.Size = new System.Drawing.Size(168, 25);
+            this.bolenlbl.TabIndex = 5;
+            this.bolenlbl.Text = "0";
+            this.bolenlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 150);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // rastgelebox1
             // 
